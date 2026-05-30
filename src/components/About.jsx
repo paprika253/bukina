@@ -24,7 +24,7 @@ export default function About() {
 
         <div className="about__text">
           <p className="section__eyebrow">{about.heading}</p>
-          <h2 className="section__title">Привет, я делаю керамику</h2>
+          <h2 className="section__title">Привет, я Лиза</h2>
           <p className="about__intro">{about.intro}</p>
           {about.paragraphs.map((p, i) => (
             <p key={i} className="about__p">

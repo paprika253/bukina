@@ -1,61 +1,61 @@
-// Галерея работ (без цен) — атмосферные кадры из мастерской и портфолио.
-// span: 'tall' | 'wide' | 'normal' — управляет размером плитки в masonry-сетке.
+// Галерея работ и мастерской.
+// span: 'tall' | 'wide' | 'normal' — размер плитки в masonry-сетке.
 
 export const gallery = [
   {
     id: 'g1',
-    title: 'Серия чашек «Рассвет»',
+    title: 'Я и моя ваза',
     image: '/images/gallery/g1.jpg',
-    tone: '#e7d8c4',
+    tone: '#bcae9a',
     span: 'tall',
   },
   {
     id: 'g2',
-    title: 'Гончарный круг, процесс',
+    title: 'Светильник в мастерской',
     image: '/images/gallery/g2.jpg',
-    tone: '#c9a98a',
-    span: 'normal',
+    tone: '#9a9690',
+    span: 'tall',
   },
   {
     id: 'g3',
-    title: 'Текстура необожжённой глины',
+    title: 'Глина и зимний Петербург',
     image: '/images/gallery/g3.jpg',
-    tone: '#b5895f',
+    tone: '#9fb0b6',
     span: 'wide',
   },
   {
     id: 'g4',
-    title: 'Глазури перед обжигом',
+    title: 'Ваза «Серебро», деталь',
     image: '/images/gallery/g4.jpg',
-    tone: '#9aa583',
+    tone: '#b9b2a6',
     span: 'normal',
   },
   {
     id: 'g5',
-    title: 'Ваза «Дюна», деталь',
+    title: 'Узор перед обжигом',
     image: '/images/gallery/g5.jpg',
-    tone: '#d8c3a5',
-    span: 'tall',
+    tone: '#cfcabb',
+    span: 'normal',
   },
   {
     id: 'g6',
-    title: 'Готовая партия из печи',
+    title: 'В мастерской',
     image: '/images/gallery/g6.jpg',
-    tone: '#ddc6ad',
+    tone: '#a59a8c',
     span: 'normal',
   },
   {
     id: 'g7',
-    title: 'Утренний натюрморт',
+    title: 'Тарелки в деле',
     image: '/images/gallery/g7.jpg',
-    tone: '#cbb295',
+    tone: '#cbc4b8',
     span: 'wide',
   },
   {
     id: 'g8',
-    title: 'Сушка изделий',
+    title: 'Автор',
     image: '/images/gallery/g8.jpg',
-    tone: '#bfa991',
+    tone: '#9a958d',
     span: 'normal',
   },
 ]

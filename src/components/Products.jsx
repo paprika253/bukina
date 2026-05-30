@@ -1,5 +1,5 @@
 import { products, statusLabels } from '../data/products.js'
-import { site } from '../data/site.js'
+import { orderLink } from '../data/site.js'
 import SmartImage from './SmartImage.jsx'
 
 const priceFmt = new Intl.NumberFormat('ru-RU', {
@@ -17,7 +17,7 @@ export default function Products() {
           <h2 className="section__title">Изделия в наличии и под заказ</h2>
           <p className="section__sub">
             Каждая вещь — в единственном экземпляре. Чтобы оформить заказ,
-            напишите мне в Instagram или на почту.
+            напишите мне в Telegram или Instagram.
           </p>
         </header>
 
@@ -39,14 +39,18 @@ export default function Products() {
                   <h3 className="product-card__name">{p.name}</h3>
                   <p className="product-card__desc">{p.description}</p>
                   <div className="product-card__foot">
-                    <span className="product-card__price">
-                      {priceFmt.format(p.price)}
+                    <span
+                      className={`product-card__price ${
+                        p.price ? '' : 'product-card__price--ask'
+                      }`}
+                    >
+                      {p.price ? priceFmt.format(p.price) : 'Цена по запросу'}
                     </span>
                     <a
                       className="product-card__btn"
-                      href={`mailto:${site.email}?subject=${encodeURIComponent(
-                        'Заказ: ' + p.name,
-                      )}`}
+                      href={orderLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       aria-disabled={sold}
                       onClick={(e) => sold && e.preventDefault()}
                     >

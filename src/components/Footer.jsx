@@ -10,10 +10,12 @@ export default function Footer() {
         </div>
 
         <div className="footer__contacts">
+          <a href={site.telegram} target="_blank" rel="noopener noreferrer">
+            Telegram {site.telegramHandle}
+          </a>
           <a href={site.instagram} target="_blank" rel="noopener noreferrer">
             Instagram {site.instagramHandle}
           </a>
-          <a href={`mailto:${site.email}`}>{site.email}</a>
           <span className="footer__city">{site.city}</span>
         </div>
       </div>

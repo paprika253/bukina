@@ -1,62 +1,67 @@
-// Каталог товаров.
-// Поля: id, name, description, price (в рублях), image, tone (цвет-заглушка),
-// status ('in_stock' | 'made_to_order' | 'sold').
-// Чтобы добавить товар — скопируйте объект и положите фото в /public/images/products/.
+// Каталог работ. Описания, материалы и цены — по подписям из профиля
+// instagram.com/liza.bukina. price: число (₽) или null, если «под заказ».
+// status: 'in_stock' | 'made_to_order' | 'sold'.
 
 export const products = [
   {
-    id: 'mug-morning',
-    name: 'Чашка «Утро»',
-    description: 'Чашка для кофе с матовой молочной глазурью и каплей терракоты по краю. 300 мл.',
-    price: 2200,
-    image: '/images/products/mug-morning.jpg',
-    tone: '#e7d8c4',
-    status: 'in_stock',
-  },
-  {
-    id: 'bowl-sand',
-    name: 'Пиала «Песок»',
-    description: 'Глубокая пиала ручной лепки для салатов и завтраков. Тёплый песочный тон, 500 мл.',
-    price: 2600,
-    image: '/images/products/bowl-sand.jpg',
-    tone: '#d8c3a5',
-    status: 'in_stock',
-  },
-  {
-    id: 'vase-dune',
-    name: 'Ваза «Дюна»',
-    description: 'Высокая ваза с рельефной фактурой. Подходит для сухоцветов и одиночных веток.',
-    price: 4800,
-    image: '/images/products/vase-dune.jpg',
-    tone: '#c9a98a',
+    id: 'vase-silver',
+    name: 'Ваза «Серебро»',
+    description:
+      'Ваза, оплетённая жгутами глины с металлической глазурью, и эмалевые цветы. Керамика, глазурь, стекло. Высота 20 см.',
+    price: null,
+    image: '/images/products/vase-silver.jpg',
+    tone: '#b9b2a6',
     status: 'made_to_order',
   },
   {
-    id: 'plate-clay',
-    name: 'Тарелка «Глина»',
-    description: 'Обеденная тарелка Ø22 см с открытым краем без глазури — виден натуральный цвет глины.',
-    price: 2900,
-    image: '/images/products/plate-clay.jpg',
-    tone: '#b5895f',
+    id: 'vase-night',
+    name: 'Ваза «Ночь»',
+    description:
+      'Та же форма в чёрно-графитовой глазури с синими цветами. Керамика, глазурь, стекло. Высота 20 см.',
+    price: null,
+    image: '/images/products/vase-night.jpg',
+    tone: '#5a5560',
+    status: 'made_to_order',
+  },
+  {
+    id: 'candle-flowers',
+    name: 'Подсвечники «Цветы»',
+    description:
+      'Подсвечники в форме цветка со спёкшимся цветным стеклом в лепестках. Каждый — в единственном экземпляре. Глина, глазурь, стекло.',
+    price: null,
+    image: '/images/products/candle-flowers.jpg',
+    tone: '#cdb89a',
+    status: 'made_to_order',
+  },
+  {
+    id: 'lamp',
+    name: 'Светильник «Свет»',
+    description:
+      'Скульптурный светильник: керамическое основание и плафон из литого стекла. Совместный проект с @_hani_light_. Белое или розовое стекло на выбор.',
+    price: null,
+    image: '/images/products/lamp.jpg',
+    tone: '#8f7e84',
     status: 'in_stock',
   },
   {
-    id: 'cup-pair',
-    name: 'Пара «Вдвоём»',
-    description: 'Набор из двух чашек на 200 мл с глазурью оттенка сливочной карамели. Идея для подарка.',
-    price: 3900,
-    image: '/images/products/cup-pair.jpg',
-    tone: '#ddc6ad',
+    id: 'plates',
+    name: 'Тарелки «Про себя»',
+    description:
+      'Тарелки с авторским рисунком в технике деколь — «люблю покушать и поспать». Не для СВЧ и посудомойки.',
+    price: 3000,
+    image: '/images/products/plates.jpg',
+    tone: '#d8d2c6',
     status: 'in_stock',
   },
   {
-    id: 'incense-stone',
-    name: 'Подставка «Камень»',
-    description: 'Керамическая подставка для благовоний с лужицей-глазурью глубокого зелёного.',
-    price: 1500,
-    image: '/images/products/incense-stone.jpg',
-    tone: '#9aa583',
-    status: 'sold',
+    id: 'candle-casanier',
+    name: 'Подсвечник (серия ST.CASANIER)',
+    description:
+      'Подсвечник из серии, сделанной для бренда ST.CASANIER. Ручная лепка, авторская форма. Возможен повтор под заказ.',
+    price: null,
+    image: '/images/products/candle-casanier.jpg',
+    tone: '#9a8a76',
+    status: 'made_to_order',
   },
 ]
 
