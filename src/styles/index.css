@@ -1,25 +1,27 @@
 /* ============================================================
    Liza Bukina — керамика. Дизайн-система.
-   Палитра: тёплая глина, терракота, крем, шалфейный акцент.
+   Палитра: холодная синяя — ледяной фон, глубокая навигация,
+   стальной и насыщенно-синий акценты.
    ============================================================ */
 
 :root {
-  --cream: #faf6f0;
-  --cream-2: #f3ebe0;
-  --sand: #e7d8c4;
-  --clay: #c17a54;
-  --clay-deep: #a5613e;
-  --terracotta: #b5651d;
-  --brown: #4a3528;
-  --brown-soft: #6b5142;
-  --ink: #2f241d;
-  --sage: #8a9a7b;
-  --line: rgba(74, 53, 40, 0.14);
+  /* Холодная синяя палитра: ледяной фон, глубокая навигация, стальной акцент */
+  --cream: #f2f6fb;
+  --cream-2: #e6eef7;
+  --sand: #d2e0f0;
+  --clay: #2f6fd6;
+  --clay-deep: #1f54aa;
+  --terracotta: #1f54aa;
+  --brown: #15263f;
+  --brown-soft: #45597a;
+  --ink: #0f1d31;
+  --sage: #5b86b3;
+  --line: rgba(21, 38, 63, 0.14);
 
   --radius: 18px;
   --radius-lg: 28px;
-  --shadow: 0 18px 40px -24px rgba(74, 53, 40, 0.45);
-  --shadow-soft: 0 10px 30px -20px rgba(74, 53, 40, 0.5);
+  --shadow: 0 18px 40px -24px rgba(15, 29, 49, 0.45);
+  --shadow-soft: 0 10px 30px -20px rgba(15, 29, 49, 0.5);
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
@@ -148,7 +150,7 @@ h3 {
   padding-block: 1.25rem;
 }
 .header--scrolled {
-  background: rgba(250, 246, 240, 0.85);
+  background: rgba(242, 246, 251, 0.85);
   backdrop-filter: saturate(160%) blur(12px);
   box-shadow: 0 1px 0 var(--line);
   padding-block: 0.7rem;
@@ -247,14 +249,14 @@ h3 {
   height: 460px;
   right: -80px;
   top: 4%;
-  background: radial-gradient(circle, rgba(193, 122, 84, 0.55), transparent 70%);
+  background: radial-gradient(circle, rgba(47, 111, 214, 0.5), transparent 70%);
 }
 .hero__blob--2 {
   width: 380px;
   height: 380px;
   left: -100px;
   bottom: -60px;
-  background: radial-gradient(circle, rgba(138, 154, 123, 0.5), transparent 70%);
+  background: radial-gradient(circle, rgba(91, 134, 179, 0.5), transparent 70%);
 }
 .hero__inner {
   position: relative;
@@ -477,8 +479,34 @@ h3 {
   opacity: 0.78;
 }
 .product-card__media {
+  display: block;
   position: relative;
   aspect-ratio: 1 / 1;
+}
+.product-card__ig {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.9rem;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(15, 29, 49, 0.45);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.25s ease;
+}
+.product-card:hover .product-card__ig {
+  opacity: 1;
+  transform: translateY(0);
+}
+.product-card__ig:hover,
+.product-card__media:focus-visible .product-card__ig {
+  background: var(--clay);
 }
 .product-card__body {
   display: flex;
@@ -546,15 +574,15 @@ h3 {
   backdrop-filter: blur(4px);
 }
 .badge--in_stock {
-  background: rgba(138, 154, 123, 0.92);
+  background: rgba(40, 134, 193, 0.92);
   color: #fff;
 }
 .badge--made_to_order {
-  background: rgba(193, 122, 84, 0.92);
+  background: rgba(91, 134, 179, 0.92);
   color: #fff;
 }
 .badge--sold {
-  background: rgba(74, 53, 40, 0.88);
+  background: rgba(21, 38, 63, 0.9);
   color: #fff;
 }
 
@@ -619,7 +647,7 @@ h3 {
   align-items: center;
   justify-content: center;
   padding: clamp(1rem, 4vw, 3rem);
-  background: rgba(33, 25, 20, 0.92);
+  background: rgba(10, 18, 31, 0.93);
   backdrop-filter: blur(6px);
   animation: fade 0.25s ease;
 }
@@ -646,16 +674,16 @@ h3 {
 .lightbox__figure figcaption {
   margin-top: 1rem;
   text-align: center;
-  color: #f3ebe0;
+  color: #dce8f6;
   font-family: var(--font-display);
   font-size: 1.2rem;
 }
 .lightbox__close,
 .lightbox__nav {
   position: absolute;
-  background: rgba(250, 246, 240, 0.12);
+  background: rgba(220, 232, 246, 0.14);
   color: #fff;
-  border: 1px solid rgba(250, 246, 240, 0.25);
+  border: 1px solid rgba(220, 232, 246, 0.28);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -665,7 +693,7 @@ h3 {
 }
 .lightbox__close:hover,
 .lightbox__nav:hover {
-  background: rgba(250, 246, 240, 0.25);
+  background: rgba(220, 232, 246, 0.28);
 }
 .lightbox__close {
   top: 1.25rem;
@@ -709,7 +737,7 @@ h3 {
 }
 .footer__role {
   margin: 0.35rem 0 0;
-  color: rgba(250, 246, 240, 0.7);
+  color: rgba(220, 232, 246, 0.7);
   font-size: 0.95rem;
 }
 .footer__contacts {
@@ -726,13 +754,13 @@ h3 {
   color: var(--sand);
 }
 .footer__city {
-  color: rgba(250, 246, 240, 0.6);
+  color: rgba(220, 232, 246, 0.6);
 }
 .footer__bottom {
   padding-block: 1.5rem;
-  border-top: 1px solid rgba(250, 246, 240, 0.15);
+  border-top: 1px solid rgba(220, 232, 246, 0.15);
   font-size: 0.85rem;
-  color: rgba(250, 246, 240, 0.6);
+  color: rgba(220, 232, 246, 0.6);
 }
 
 /* ============================================================
